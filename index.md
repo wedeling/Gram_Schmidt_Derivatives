@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Differentiating Gram Schmidt
 
 You can use the [editor on GitHub](https://github.com/wedeling/Gram_Schmidt_Derivatives/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
