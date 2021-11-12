@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/Gram_Schmidt_Derivatives/assets/css/style.css?v=7dcb351b5415fb5e743c836afb2a0f07deef3338">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Differentiating Gram Schmidt | Gram_Schmidt_Derivatives</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Differentiating Gram Schmidt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Repository for computing the derivatives of Gram-Schmidt vectors" />
+<meta property="og:description" content="Repository for computing the derivatives of Gram-Schmidt vectors" />
+<link rel="canonical" href="https://wedeling.github.io/Gram_Schmidt_Derivatives/" />
+<meta property="og:url" content="https://wedeling.github.io/Gram_Schmidt_Derivatives/" />
+<meta property="og:site_name" content="Gram_Schmidt_Derivatives" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Differentiating Gram Schmidt" />
+<script type="application/ld+json">
+{"description":"Repository for computing the derivatives of Gram-Schmidt vectors","url":"https://wedeling.github.io/Gram_Schmidt_Derivatives/","@type":"WebSite","headline":"Differentiating Gram Schmidt","name":"Gram_Schmidt_Derivatives","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/Gram_Schmidt_Derivatives/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+            <a id="forkme_banner" href="https://github.com/wedeling/Gram_Schmidt_Derivatives">View on GitHub</a>
+          
+
+          <h1 id="project_title">Gram_Schmidt_Derivatives</h1>
+          <h2 id="project_tagline">Repository for computing the derivatives of Gram-Schmidt vectors</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2 id="differentiating-gram-schmidt">Differentiating Gram Schmidt</h2>
+
+<p>Gram-Schmidt orthogonalization is a well-known technique where an non-orthogonal set of column vectors <img src="https://latex.codecogs.com/svg.latex?%5Cinline%20%7B%5Cbf%20q%7D_i%5Cin%5Cmathbb%7BR%7D%5ED" alt="equation" /> is made orthogonal via</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?%5Cbegin%7Balign*%7D%20%7B%5Cbf%20w%7D_i%20%3D%20%7B%5Cbf%20q%7D_i%20-%20%5Csum_%7Bj%3D1%7D%5E%7Bi-1%7D%5Cleft%28%5Cfrac%7B%7B%5Cbf%20w%7D_j%5ET%7B%5Cbf%20q%7D_i%7D%7B%7B%5Cbf%20w%7D_j%5ET%7B%5Cbf%20w%7D_j%7D%5Cright%29%7B%5Cbf%20w%7D_j%2C%20%5Cquad%20i%20%3D%201%2C%5Ccdots%2C%20d.%20%5Cend%7Balign*%7D" alt="equation" /></p>
+
+<p>We have developed a simple recurrence relation to compute the derivatives of <img src="https://latex.codecogs.com/svg.latex?%5Cinline%20%7B%5Cbf%20w%7D_i" alt="equation" /> with respect to <img src="https://latex.codecogs.com/svg.latex?%5Cinline%20%7B%5Cbf%20q%7D_i" alt="equation" />:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cboxed%7B%5Cbegin%7Balign*%7D%20%5Cfrac%7B%5Cpartial%7B%5Cbf%20w%7D_1%7D%7B%5Cpartial%7B%5Cbf%20q%7D_1%7D%20%3D%3A%20D_%7B11%7D%20%3D%20I_D%20%5C%5C%20%5Cfrac%7B%5Cpartial%7B%5Cbf%20w%7D_i%7D%7B%5Cpartial%7B%5Cbf%20q%7D_i%7D%20%3D%3A%20D_%7Bii%7D%20%3D%20D_%7Bi-1%2C%5C%2C%20i-1%7D%20-%20%5Cfrac%7B%7B%5Cbf%20w%7D_%7Bi-1%7D%7B%5Cbf%20w%7D_%7Bi-1%7D%5ET%7D%7B%7B%5Cbf%20w%7D_%7Bi-1%7D%5ET%7B%5Cbf%20w%7D_%7Bi-1%7D%7D%2C%5Cquad%20i%20%3E%201%2C%20%5C%5C%20%5Cfrac%7B%5Cpartial%7B%5Cbf%20w%7D_i%7D%7B%5Cpartial%7B%5Cbf%20q%7D_k%7D%20%3D%20%5Csum_%7Bj%3D1%7D%5E%7Bi-1%7DD_%7Bij%7D%5Cfrac%7B%5Cpartial%7B%5Cbf%20w%7D_j%7D%7B%5Cpartial%7B%5Cbf%20q%7D_k%7D%2C%5Cquad%20i%5Cneq%20k%2C%20%5Cquad%20i%20%3E%20k%2C%20%5C%5C%20D_%7Bij%7D%3A%3D%20-%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%7B%5Cbf%20w%7D_j%7D%5Cleft%5B%5Cleft%28%5Cfrac%7B%7B%5Cbf%20w%7D_j%5ET%7B%5Cbf%20q%7D_i%7D%7B%7B%5Cbf%20w%7D_j%5ET%7B%5Cbf%20w%7D_j%7D%5Cright%29%7B%5Cbf%20w%7D_j%5Cright%5D%20%3D%20-%5Cleft%5B%5Cfrac%7B1%7D%7B%7B%5Cbf%20w%7D_j%5ET%7B%5Cbf%20w%7D_j%7D%5C%3B%7B%5Cbf%20w%7D_j%7B%5Cbf%20q%7D_i%5ET%20-%20%5Cfrac%7B2%7B%5Cbf%20w%7D_j%5ET%7B%5Cbf%20q%7D_i%7D%7B%28%7B%5Cbf%20w%7D_j%5ET%7B%5Cbf%20w%7D_j%29%5E2%7D%5C%3B%7B%5Cbf%20w%7D_j%7B%5Cbf%20w%7D_j%5ET%20&plus;%20%5Cfrac%7B%7B%5Cbf%20w%7D_j%5ET%7B%5Cbf%20q%7D_i%7D%7B%7B%5Cbf%20w%7D_j%5ET%7B%5Cbf%20w%7D_j%7D%5C%3B%20I_D%5Cright%5D%2C%5Cquad%20i%5Cneq%20j%2C%5Cquad%20i%20%3E%20j.%20%5Cend%7Balign*%7D%7D" alt="equation" /></p>
+
+<p>Gram-Schmidt vectors are often normalized in practice, to obtain the set:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbegin%7Balign*%7D%20W%20%3D%20%5Cbigg%5C%7B%5Cfrac%7B%7B%5Cbf%20w%7D_1%28%7B%5Cbf%20q%7D_1%29%7D%7B%5ClVert%7B%5Cbf%20w%7D_1%28%7B%5Cbf%20q%7D_1%29%5CrVert_2%7D%2C%5C%3B%5C%3B%5Cfrac%7B%7B%5Cbf%20w%7D_2%28%7B%5Cbf%20q%7D_1%2C%20%7B%5Cbf%20q%7D_2%29%7D%7B%5ClVert%7B%5Cbf%20w%7D_2%28%7B%5Cbf%20q%7D_1%2C%20%7B%5Cbf%20q%7D_2%29%5CrVert_2%7D%2C%5C%3B%5C%3B%5Ccdots%5C%3B%5C%3B%2C%5Cfrac%7B%7B%5Cbf%20w%7D_d%28%7B%5Cbf%20q%7D_1%2C%7B%5Cbf%20q%7D_2%5C%2C%5Ccdots%2C%7B%5Cbf%20q%7D_d%29%7D%7B%5ClVert%7B%5Cbf%20w%7D_d%28%7B%5Cbf%20q%7D_1%2C%7B%5Cbf%20q%7D_2%5C%2C%5Ccdots%2C%7B%5Cbf%20q%7D_d%29%5CrVert_2%7D%5Cbigg%5C%7D.%20%5Cend%7Balign*%7D" alt="equation" /></p>
+
+<p>The derivatives of these normalized vectors are obtained by premultiplying the unnormalized derivative with a matrix that only depends upon <img src="https://latex.codecogs.com/svg.latex?%5Cinline%20%7B%5Cbf%20w%7D_i" alt="equation" />:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbegin%7Balign*%7D%20%5Cboxed%7B%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%7B%5Cbf%20q%7D_k%7D%5Cleft%28%5Cfrac%7B%7B%5Cbf%20w%7D_i%7D%7B%5ClVert%7B%5Cbf%20w%7D_i%5CrVert_2%7D%5Cright%29%20%3D%20%5Cleft%5B%5Cfrac%7BI_D%7D%7B%5ClVert%7B%5Cbf%20w%7D_i%5CrVert_2%7D%20-%20%5Cfrac%7B%7B%5Cbf%20w%7D_i%7B%5Cbf%20w%7D_i%5ET%7D%7B%5ClVert%7B%5Cbf%20w%7D_i%5CrVert%5E3_2%7D%5Cright%5D%5Cfrac%7B%5Cpartial%7B%5Cbf%20w%7D_i%7D%7B%5Cpartial%7B%5Cbf%20q%7D_k%7D.%7D%20%5Cend%7Balign*%7D" alt="equation" /></p>
+
+<h3 id="contents-repository">Contents repository</h3>
+
+<p>The following files are present in the repository:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">gram_schmidt_derivatives.py</code>: a Python3 class for computing Gram-Schmidt vectors and the derivatives.</li>
+  <li><code class="language-plaintext highlighter-rouge">derivation.pdf</code>: a document which details the derivation of the derivative expressions.</li>
+  <li><code class="language-plaintext highlighter-rouge">check_derivatives.ipynb</code>: a Jupyter notebook which verifies the validity of the derivative expressions, and which verifies the Python3 implementation of <code class="language-plaintext highlighter-rouge">gram_schmidt_derivatives.py</code>. Also acts as a tutorial for the Python3 class.</li>
+</ul>
+
+<p>Development was funded by the EU Horizon 2020 project <a href="http://www.vecma.eu/">VECMA</a>.</p>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">Gram_Schmidt_Derivatives maintained by <a href="https://github.com/wedeling">wedeling</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
