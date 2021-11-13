@@ -8,7 +8,6 @@
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Differentiating Gram Schmidt | Analytic derivatives of Gram Schmidt vectors </title>
-<meta name="generator" content="Bluefish 2.2.11" />
 <meta property="og:title" content="Differentiating Gram Schmidt" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Repository for computing the derivatives of Gram-Schmidt vectors" />
@@ -33,6 +32,9 @@
 
 <!-- end custom head snippets -->
 
+<!-- Link to fontawesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
+
 <style>
     .myHeader {
         border: 2px outset black;
@@ -40,6 +42,14 @@
         text-align: center;
         font-family: Arial;
     }
+
+    .myFooter {
+        background-color:lightblue;    
+        text-align:left;
+        font-family: Arial;
+        font-size: 14px;
+    }
+    
     .myBody {
         text-align:justify;
         background-color: white;
@@ -53,6 +63,24 @@
     .myImage {
         text-align: center
     }
+
+    /* Common fontawesome properties */
+     .font-awesome-icons::before {
+        display:inline;
+        font-style:normal;
+        font-variant: normal;
+        color:black;
+      }
+
+    /* GitHub icon*/
+    .github::before {
+    font-family: "Font Awesome 5 Brands"; 
+	font-weight: 900;
+    font-size: 32px;
+	content: "\f09b";
+    }
+
+
 </style>
 
   </head>
@@ -61,9 +89,10 @@
 
     <!-- HEADER -->
     <div id="header_wrap" class="myHeader">
-        <header class="inner">
+        <header>
           
-            <a id="forkme_banner" href="https://github.com/wedeling/Gram_Schmidt_Derivatives">View on GitHub</a>
+            <a style="text-decoration:none" href="https://github.com/wedeling/Gram_Schmidt_Derivatives"><span class="font-awesome-icons github"></span> 
+View on GitHub</a>
           
 
           <h1 id="project_title">Gram Schmidt Derivatives</h1>
@@ -100,7 +129,7 @@
 <p><img src="https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbegin%7Balign*%7D%20%5Cboxed%7B%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%7B%5Cbf%20q%7D_k%7D%5Cleft%28%5Cfrac%7B%7B%5Cbf%20w%7D_i%7D%7B%5ClVert%7B%5Cbf%20w%7D_i%5CrVert_2%7D%5Cright%29%20%3D%20%5Cleft%5B%5Cfrac%7BI_D%7D%7B%5ClVert%7B%5Cbf%20w%7D_i%5CrVert_2%7D%20-%20%5Cfrac%7B%7B%5Cbf%20w%7D_i%7B%5Cbf%20w%7D_i%5ET%7D%7B%5ClVert%7B%5Cbf%20w%7D_i%5CrVert%5E3_2%7D%5Cright%5D%5Cfrac%7B%5Cpartial%7B%5Cbf%20w%7D_i%7D%7B%5Cpartial%7B%5Cbf%20q%7D_k%7D.%7D%20%5Cend%7Balign*%7D" alt="equation" /></p>
 </div>
     
-<h3 id="contents-repository">Contents repository</h3>
+<h2 id="contents-repository">Contents repository</h2>
 
 <p>The following files are present in the repository:</p>
 
@@ -118,12 +147,11 @@
     </div>
 
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
+    <div class="myFooter">
+      <footer>
         
-        <p class="copyright">Gram_Schmidt_Derivatives maintained by <a href="https://github.com/wedeling">wedeling</a></p>
+        <p> Gram_Schmidt_Derivatives maintained by <a href="https://github.com/wedeling">wedeling</a></p>
         
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
   </body>
