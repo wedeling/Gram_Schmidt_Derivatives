@@ -14,4 +14,6 @@ The following files are present:
 * `derivation.pdf`: a document which details the derivation of the derivative expressions.
 * `check_derivatives.ipynb`: a Jupyter notebook which verifies the validity of the derivative expressions, and which verifies the Python3 implementation of `gram_schmidt_derivatives.py`. Also acts as a tutorial for the Python3 class.
 
-Development was funded by the EU Horizon 2020 project [VECMA](http://www.vecma.eu/).
+### Funding
+
+This research is funded by the European Union Horizon 2020 research and innovation programme under grant agreement \#800925 ([VECMA](https://www.vecma.eu) project).
